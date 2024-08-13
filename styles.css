@@ -12,10 +12,10 @@ h1{
 }
 
 .container{
-    width: 70%;
+    width: 40%;
     height: 60vh;
     margin: auto;
-    padding: 20px;
+    padding: 10px;
     overflow: hidden;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -23,11 +23,17 @@ h1{
 
 .container div{
     width: 70%;
+    height: 90px;
     padding: 10px;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    font-size: 0;
     background-color: #e4e2e2;
+    border: 1px solid black;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    margin: 15px;
+    margin: 10px;
     transition: 0.5s;
     cursor: pointer;
 }
@@ -37,9 +43,27 @@ h1{
 }
 
 
+.message{
+    position: absolute;
+    font-weight: bold;
+    text-align: center;
+    color: #e4e2e2;
+    width: 30%;
+    height: 50px;
+    top: 40vh;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    background-color: #8b8282;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+
 #reset{
     display: block;
     margin: auto;
+    margin-top: 20px;
     padding: 20px 40px;
     background-color: #e4e2e2;
     color: #3d3b3b;
@@ -51,5 +75,12 @@ h1{
 
 #reset:hover
 {
-    transform: scale(1.1);
+    background-color: #8b8282;
+    color: #e4e2e2;
+}
+
+@media screen and (max-width: 768px){
+    .container{
+        width: 80%;
+    }
 }
